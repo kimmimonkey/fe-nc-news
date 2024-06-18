@@ -1,11 +1,13 @@
+import ArticleList from './ArticleList'
 import Header from './Header'
 import NavBar from './NavBar'
 
 const Home = () => {
     return (
         <section> 
-        <Header />
         <NavBar />
+        <Header />
+        <ArticleList />
         </section>
     )
 }

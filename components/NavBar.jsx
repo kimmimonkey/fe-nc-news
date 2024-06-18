@@ -1,9 +1,9 @@
+import Link from "./Link"
 
 const NavBar = () => {
     return (
-        <section>
+        <Link/> 
     
-        </section>
     )
 }
 

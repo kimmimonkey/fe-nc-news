@@ -1,13 +1,19 @@
+import ButtonLink from "../components/ButtonLink"
 
-
-const ArticleCard = ({title, topic, author, img, published, comments}) => {
+const ArticleCard = ({article_id, title, topic, author, img, published, comments}) => {
     return (
     <section>
-    <h3> {title} by {author} </h3>
-    <p> {published} {comments}</p>
+    <header> 
+    <h3> {title} </h3>
+    <h4>by {author}</h4>
+    </header>
+    <article>
+    <section> <p> {published} </p>
+     <p> comments: {comments} </p> </section>
     <p> {topic} </p>
-    <section> </section>
+    <ButtonLink to = {`/articles/${article_id}`}> Read article </ButtonLink>
     <section> {img} </section>
+    </article>
     </section>
     )
 
