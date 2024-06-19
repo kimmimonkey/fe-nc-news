@@ -16,3 +16,9 @@ export const getSingleArticleById = (article_id) => {
         .then((response) => response.data.article)
 }
 
+
+export const getArticleComments = (article_id) => {
+    return myApi 
+    .get(`/articles/${article_id}/comments`)
+    .then((response) => response.data.comments)
+}
