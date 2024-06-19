@@ -1,5 +1,5 @@
-import ButtonLink from "../components/ButtonLink"
-import CommentList from "./CommentList";
+import ButtonLink from "../ButtonLink"
+import CommentList from "../Comment-Components/CommentList";
 
 const IndividualArticleCard = ({ article_id, title, author, body, topic, comments, published, img }) => {
     return (

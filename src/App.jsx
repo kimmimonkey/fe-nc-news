@@ -2,10 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 
-import Home from '../components/Home'
-import ArticleList from '../components/ArticleList'
-import NavBar from '../components/NavBar'
-import SingleArticle from '../components/SingleArticle'
+import Home from './components/Home'
+import ArticleList from './components/Article-Components/ArticleList'
+import NavBar from './components/NavBar'
+import SingleArticle from './components/Article-Components/SingleArticle'
 
 
 function App() {

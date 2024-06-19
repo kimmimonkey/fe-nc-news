@@ -1,4 +1,4 @@
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../ButtonLink"
 
 const ArticleCard = ({article_id, title, topic, author, img, published, comments}) => {
     return (

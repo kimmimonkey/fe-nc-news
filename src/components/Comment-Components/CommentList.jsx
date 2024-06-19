@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticleComments } from "../src/api";
-import CommentCard from "../components/CommentCard";
-import Toggle from "./Toggle";
+import { getArticleComments } from "../../api";
+import CommentCard from "../Comment-Components/CommentCard";
+import Toggle from "../Toggle";
 
 const CommentList = () => {
     const [isLoading, setIsLoading] = useState(true);
