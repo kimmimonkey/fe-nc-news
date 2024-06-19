@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import IndividualArticleCard from "../components/IndividualArticleCard"
-import { getSingleArticleById } from "../src/api"
+import IndividualArticleCard from "./IndividualArticleCard"
+import { getSingleArticleById } from "../../api"
 
 const SingleArticle = () => {
     const [isLoading, setIsLoading] = useState(true)
