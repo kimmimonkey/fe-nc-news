@@ -1,20 +1,28 @@
+import "./ArticleCard.css"
 import ButtonLink from "../ButtonLink"
 
 const ArticleCard = ({article_id, title, topic, author, img, published, comments}) => {
     return (
-    <section>
+    <main>
+
     <header> 
     <h3> {title} </h3>
-    <h4>by {author}</h4>
-    </header>
-    <article>
-    <section> <p> {published} </p>
-     <p> comments: {comments} </p> </section>
-    <p> {topic} </p>
-    <ButtonLink to = {`/articles/${article_id}`}> Read article </ButtonLink>
-    <section> {img} </section>
-    </article>
+    
+    <section className = "subheader"> 
+    <h4>by {author}</h4> {topic}
     </section>
+    </header>
+
+    <article>
+    
+    <section className = "article-img"> {img} </section>
+    
+    <section className = "details" >  {published}  <p>comments: {comments} </p></section>
+   
+    <section className = "links"><ButtonLink to = {`/articles/${article_id}`}> Read article </ButtonLink></section>
+   
+    </article>
+    </main>
     )
 
 }
