@@ -1,5 +1,3 @@
-import ButtonLink from "../components/ButtonLink"
-
 const CommentCard = ({article_id, comment_id, body, author, published, votes}) => {
     return (
     <article>
