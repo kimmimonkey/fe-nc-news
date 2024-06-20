@@ -1,11 +1,12 @@
-const CommentCard = ({article_id, comment_id, body, author, published, votes}) => {
+
+
+const CommentCard = ({comment_id, body, author, published}) => {
     return (
     <article>
     <main> 
         {body}
         </main>
         <p>Comment posted {published} by {author} </p>
-        <p> {`${votes} votes`}</p>
     </article>)
 }
 

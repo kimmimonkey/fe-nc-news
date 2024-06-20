@@ -1,5 +1,5 @@
 import ArticleList from './Article-Components/ArticleList'
-import Header from '/home/kim/Documents/Coding/front-end/fe-nc-news/src/components/Header.jsx'
+import Header from './Header'
 import NavBar from './NavBar'
 
 const Home = () => {

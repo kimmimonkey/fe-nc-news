@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getArticles } from "../../api"
+import { getArticles, addArticleVote } from "../../api"
 import ArticleCard from "./ArticleCard"
 
 
@@ -18,7 +18,6 @@ const ArticleList = () => {
             })
     }, [])
 
-
     if (isLoading) {
         return <p> Loading... </p>
     }
@@ -32,9 +31,12 @@ const ArticleList = () => {
                     title={article.title}
                     topic={article.topic}
                     author={article.author}
+                    votes={article.votes}
                     published={new Date(article.created_at).toUTCString()}
                     img=<img src={article.article_img_url} alt="article image" width="100" height="100" />
-                    comments={article.comment_count} />)}
+                    comments={article.comment_count} 
+                    onVote={addArticleVote}
+                    />)}
             </ul>
         </section>
     )

@@ -1,7 +1,7 @@
 import ButtonLink from "../ButtonLink"
 import CommentList from "../Comment-Components/CommentList";
 
-const IndividualArticleCard = ({ article_id, title, author, body, topic, comments, published, img }) => {
+const IndividualArticleCard = ({ article_id, title, author, body, topic, votes, comments, onVote, published, img }) => {
     return (
         <article>
             <header>
@@ -12,12 +12,13 @@ const IndividualArticleCard = ({ article_id, title, author, body, topic, comment
                 <section>
                 {body}
                 </section>
-                <ButtonLink to = {'/'}> NC News Home </ButtonLink>
-                {/* Button to vote for article */}
+                <p> {`${votes} votes`}</p>
+                <button onClick={() => onVote(1)}> Like </button> 
+                <button onClick={() => onVote(-1)}> Dislike </button>
+                <ButtonLink to = {'/'}> NC News Home </ButtonLink>/
                 <CommentList/>
-               
-        </article>
-    )
+                </article>
+    );
 }
 
 export default IndividualArticleCard;
