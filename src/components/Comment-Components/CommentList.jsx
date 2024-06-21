@@ -6,13 +6,14 @@ import Toggle from "../Toggle";
 
 const CommentList = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [list, setList] = useState([]);
+    const [comments, setComments] = useState([]);
+
     const { article_id } = useParams();
 
     useEffect(() => {
         getArticleComments(article_id)
             .then((comments) => {
-                setList(comments);
+                setComments(comments);
                 setIsLoading(false);
             })
             .catch((err) => {
@@ -24,22 +25,22 @@ const CommentList = () => {
     if (isLoading) {
         return <p> Loading.... </p>
     }
-
     return (
         <>
             <Toggle>
-            <ul>
-            <h4> Comments </h4>
-                {list.map((comment) => (
-                    <CommentCard key={comment.comment_id}
-                        article={comment.article_id}
-                        body={comment.body}
-                        author={comment.author}
-                        published={new Date(comment.created_at).toUTCString()}
-                        votes={comment.votes}
-                    />
-                ))}
-            </ul>
+                <ul>
+                    <h4> Comments </h4>
+                    {comments.map((comment) => (
+                        <CommentCard key={comment.comment_id}
+                            article={comment.article_id}
+                            body={comment.body}
+                            author={comment.author}
+                            published={new Date(comment.created_at).toUTCString()}
+                            votes={comment.votes}
+                        />
+
+                    ))}
+                </ul>
             </Toggle>
         </>
     )

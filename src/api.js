@@ -21,3 +21,9 @@ export const getArticleComments = (article_id) => {
     .get(`/articles/${article_id}/comments`)
     .then((response) => response.data.comments)
 }
+
+export const addArticleVote = (article_id, increment) => {
+    return myApi
+    .patch(`/articles/${article_id}`, {inc_votes: increment})
+    .then((response) => response.data.article);
+}
